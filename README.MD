@@ -5,30 +5,16 @@ A smart contract that implements a multi-signature wallet with facilities like a
 
 ### WorkFlow -
 
-1. Deployment of contract by Contract Owner.
+1. Deployment of contract 'SimpleMultiSigWallet.sol' by Contract Owner.
 2. Addition of ether to wallet by any owner using fallback function.
-3. Only Contract Owner can add or remove other owners to wallet using addOwner and removeOwner repectively.
-4. Any owner can request for withdrawl of amount from wallet which will initialize transaction and generate transactionId.
-5. To get list of ongoing active transactions method getActiveTransactions can be invoked.
-6. Atleast 2 confirmations from other owners is required to complete transaction.
-7. Owners can confirm transaction with transactionId using confirmTransaction.
-8. Owner can also delete the submitted transaction using deleteTransaction.
-9. After 2 confirmations to transaction, it will execute and amount will be transferred.
+3. Balance of Wallet can be checked using walletBalance.
+4. Only Contract Owner can add or remove other owners to wallet using addOwner and removeOwner repectively.
+5. Any owner can request for withdrawl of amount from wallet which will initialize transaction and generate transactionId.
+6. To get list of ongoing active transactions method getActiveTransactions can be invoked.
+7. Atleast 2 confirmations from other owners is required to complete transaction.
+8. Owners can confirm transaction with transactionId using confirmTransaction.
+9. Owner can also delete the submitted transaction using deleteTransaction.
+10. After 2 confirmations to transaction, it will execute and amount will be transferred destination account.
 
-### Steps to Execute -
 
-To compile the project run:
-```
-truffle compile
-```
-
-To migrate the project run:
-```
-truffle migrate
-```
-
-To test the project run:
-```
-truffle test
-```
 

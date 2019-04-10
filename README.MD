@@ -1,9 +1,9 @@
-##Simple MultiSignature Wallet
+## Simple MultiSignature Wallet
 
 	A smart contract that implements a multi-signature wallet with facilities like adding and removing owners to the wallet, ability to sign confirmation from owners, adding ether to the wallet and finally transferring ether for its purpose with multiple required signatures. 
 
 
-####WorkFlow -
+### WorkFlow -
 
 1. Deployment of contract by Contract Owner.
 2. Addition of ether to wallet by any owner using fallback function.
@@ -15,8 +15,7 @@
 8. Owner can also delete the submitted transaction using deleteTransaction.
 9. After 2 confirmations to transaction, it will execute and amount will be transferred.
 
-
-
+### Steps to Execute -
 
 To compile the project run:
 ```

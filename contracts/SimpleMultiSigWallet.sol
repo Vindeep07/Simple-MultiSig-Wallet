@@ -1,6 +1,10 @@
 pragma solidity ^0.5.0;
 
+/** @title MultiSignature Wallet. */
+
 contract SimpleMultiSigWallet {
+
+    /** @dev Multisignature wallet with transactions.      */
 
     address private _owner;
     mapping(address => uint8) private _owners;
@@ -9,16 +13,18 @@ contract SimpleMultiSigWallet {
     uint[] private _pendingTransactions;
 
     struct Transaction {
-      address payable from;
+      address payable from;  
       address payable to;
       uint amount;
       uint8 ConfirmationCount;
-      mapping (address => uint8) signatures;
+      mapping (address => uint8) signatures; 
     }
-
-    mapping(uint => Transaction) _transactions;
-    uint8 constant private _sigRequiredCount = 2;
-
+    
+    
+    mapping(uint => Transaction) _transactions; /** creates unique transactionId for each struct Transaction */
+    uint8 constant private _sigRequiredCount = 2; /** Minimum number of required signatures to execute transaction */
+    
+    /** Modifier for checking validity of owner of wallet */
     modifier validOwner() {
         require(msg.sender == _owner || _owners[msg.sender] == 1);
         //require(_owners[msg.sender] == 1);

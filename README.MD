@@ -1,7 +1,5 @@
 ## Simple MultiSignature Wallet
-
-
-	 A smart contract that implements a multi-signature wallet with facilities like adding and removing owners to the wallet, ability to sign confirmation from owners, adding ether to the wallet and finally transferring ether for its purpose with multiple required signatures. 
+A smart contract that implements a multi-signature wallet with facilities like adding and removing owners to the wallet, ability to sign confirmation from owners, adding ether to the wallet and finally transferring ether for its purpose with multiple required signatures. 
 
 
 
